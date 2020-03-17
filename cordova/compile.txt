@@ -1,0 +1,132 @@
+Checking Java JDK and Android SDK versions
+ANDROID_SDK_ROOT=/usr/local/android/android-sdk-linux (recommended setting)
+ANDROID_HOME=/usr/local/android/android-sdk-linux (DEPRECATED)
+To honour the JVM settings for this build a new JVM will be forked. Please consider using the daemon: https://docs.gradle.org/4.10.3/userguide/gradle_daemon.html.
+Daemon will be stopped at the end of the build stopping after processing
+Parallel execution with configuration on demand is an incubating feature.
+> Task :wrapper
+
+BUILD SUCCESSFUL in 3s
+1 actionable task: 1 executed
+Subproject Path: CordovaLib
+Subproject Path: app
+Downloading https://services.gradle.org/distributions/gradle-4.10.3-all.zip
+................................................................................................................
+To honour the JVM settings for this build a new JVM will be forked. Please consider using the daemon: https://docs.gradle.org/4.10.3/userguide/gradle_daemon.html.
+Daemon will be stopped at the end of the build stopping after processing
+Parallel execution with configuration on demand is an incubating feature.
+
+> Configure project :app
++-----------------------------------------------------------------
+| cordova-android-support-gradle-release: 27.+
++-----------------------------------------------------------------
+WARNING: Configuration 'compile' is obsolete and has been replaced with 'implementation' and 'api'.
+It will be removed at the end of 2018. For more information see: http://d.android.com/r/tools/update-dependency-configurations.html
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+
+> Task :app:preBuild UP-TO-DATE
+> Task :CordovaLib:preBuild UP-TO-DATE
+> Task :CordovaLib:preDebugBuild UP-TO-DATE
+> Task :app:prepareLintJar
+> Task :CordovaLib:checkDebugManifest
+> Task :CordovaLib:processDebugManifest
+> Task :CordovaLib:compileDebugAidl NO-SOURCE
+> Task :CordovaLib:packageDebugRenderscript NO-SOURCE
+> Task :CordovaLib:compileDebugRenderscript
+> Task :CordovaLib:generateDebugBuildConfig
+> Task :CordovaLib:generateDebugResValues
+> Task :CordovaLib:generateDebugResources
+> Task :CordovaLib:packageDebugResources
+> Task :CordovaLib:generateDebugRFile
+> Task :CordovaLib:prepareLintJar
+> Task :CordovaLib:generateDebugSources
+> Task :CordovaLib:javaPreCompileDebug
+
+> Task :CordovaLib:compileDebugJavaWithJavac
+Note: /mnt/workspace/cordova/platforms/android/CordovaLib/src/org/apache/cordova/engine/SystemCookieManager.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :CordovaLib:processDebugJavaRes NO-SOURCE
+> Task :CordovaLib:transformClassesAndResourcesWithPrepareIntermediateJarsForDebug
+> Task :CordovaLib:mergeDebugShaders
+> Task :CordovaLib:compileDebugShaders
+> Task :CordovaLib:generateDebugAssets
+> Task :CordovaLib:packageDebugAssets
+> Task :CordovaLib:compileDebugNdk NO-SOURCE
+> Task :CordovaLib:mergeDebugJniLibFolders
+> Task :CordovaLib:transformNativeLibsWithMergeJniLibsForDebug
+> Task :CordovaLib:transformNativeLibsWithIntermediateJniLibsForDebug
+> Task :app:preDebugBuild
+> Task :app:compileDebugAidl NO-SOURCE
+> Task :app:compileDebugRenderscript
+> Task :app:checkDebugManifest
+> Task :app:generateDebugBuildConfig
+> Task :app:generateDebugSources
+> Task :app:javaPreCompileDebug
+> Task :app:mainApkListPersistenceDebug
+> Task :app:generateDebugResValues
+> Task :app:generateDebugResources
+> Task :app:writeDebugApplicationId
+
+> Task :app:processDebugGoogleServices
+Parsing json file: /mnt/workspace/cordova/platforms/android/app/google-services.json
+
+> Task :app:mergeDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:processDebugManifest
+> Task :app:processDebugResources
+
+> Task :app:compileDebugJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: /mnt/workspace/cordova/platforms/android/app/src/main/java/org/apache/cordova/file/AssetFilesystem.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :app:compileDebugNdk NO-SOURCE
+> Task :app:compileDebugSources
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders
+> Task :app:generateDebugAssets
+> Task :app:mergeDebugAssets
+> Task :app:validateSigningDebug
+> Task :app:signingConfigWriterDebug
+/mnt/workspace/cordova/platforms/android/app/libs/AfariaSLL-7.00.6169.0.jar: D8: Type `org.apache.http.util.EncodingUtils` was not found, it is required for default or static interface methods desugaring of `byte[] com.Android.Afaria.ntlm.NTLM.parseType2MessageTarget(java.lang.String)`
+/mnt/workspace/cordova/platforms/android/app/libs/AfariaSLL-7.00.6169.0.jar: D8: Interface `org.apache.http.auth.AuthSchemeFactory` not found. It's needed to make sure desugaring of `com.Android.Afaria.ntlm.NTLMSchemeFactory` is correct. Desugaring will assume that this interface has no default method.
+/mnt/workspace/cordova/platforms/android/app/libs/AfariaSLL-7.00.6169.0.jar: D8: Interface `org.apache.http.impl.auth.NTLMEngine` not found. It's needed to make sure desugaring of `com.Android.Afaria.ntlm.AfariaNTLMEngine` is correct. Desugaring will assume that this interface has no default method.
+/root/.gradle/caches/transforms-1/files-1.1/Connectivity-3.16.21.aar/28c40052a875319c60a8eb9bdb974bfb/jars/classes.jar: D8: Interface `org.apache.http.HttpEntity` not found. It's needed to make sure desugaring of `com.sap.mobile.lib.sdmconnectivity.SocketConnectionHandler$1` is correct. Desugaring will assume that this interface has no default method.
+/root/.gradle/caches/transforms-1/files-1.1/Connectivity-3.16.21.aar/28c40052a875319c60a8eb9bdb974bfb/jars/classes.jar: D8: Type `org.apache.http.params.HttpProtocolParams` was not found, it is required for default or static interface methods desugaring of `org.apache.http.impl.client.DefaultHttpClient com.sap.mobile.lib.sdmconnectivity.ConnectionFactory.getHttpClient(java.lang.String)`
+/root/.gradle/caches/transforms-1/files-1.1/Connectivity-3.16.21.aar/28c40052a875319c60a8eb9bdb974bfb/jars/classes.jar: D8: Type `org.apache.http.client.params.HttpClientParams` was not found, it is required for default or static interface methods desugaring of `org.apache.http.impl.client.DefaultHttpClient com.sap.mobile.lib.sdmconnectivity.ConnectionFactory.getHttpClient(java.lang.String)`
+/root/.gradle/caches/transforms-1/files-1.1/Connectivity-3.16.21.aar/28c40052a875319c60a8eb9bdb974bfb/jars/classes.jar: D8: Type `org.apache.http.message.BasicHttpResponse` was not found, it is required for default or static interface methods desugaring of `java.util.Map com.sap.mobile.lib.sdmconnectivity.SDMResponseImpl.getHeadersMap()`
+/root/.gradle/caches/transforms-1/files-1.1/Connectivity-3.16.21.aar/28c40052a875319c60a8eb9bdb974bfb/jars/classes.jar: D8: Type `org.apache.http.util.EntityUtils` was not found, it is required for default or static interface methods desugaring of `com.sap.mobile.lib.sdmconnectivity.ISDMRequestStateElement com.sap.mobile.lib.sdmconnectivity.SocketConnectionHandler.performRequest(java.lang.String)`
+/root/.gradle/caches/transforms-1/files-1.1/Connectivity-3.16.21.aar/28c40052a875319c60a8eb9bdb974bfb/jars/classes.jar: D8: Interface `org.apache.http.HttpResponse` not found. It's needed to make sure desugaring of `com.sap.mobile.lib.sdmconnectivity.SDMResponseImpl` is correct. Desugaring will assume that this interface has no default method. This missing interface is declared in the direct hierarchy of `com.sap.mobile.lib.sdmconnectivity.ISDMResponse(classpath class)`
+/root/.gradle/caches/transforms-1/files-1.1/Connectivity-3.16.21.aar/28c40052a875319c60a8eb9bdb974bfb/jars/classes.jar: D8: Interface `org.apache.http.client.CookieStore` not found. It's needed to make sure desugaring of `com.sap.mobile.lib.sdmconnectivity.CookieJar` is correct. Desugaring will assume that this interface has no default method.
+/root/.gradle/caches/transforms-1/files-1.1/Request-3.16.21.aar/e2bd0b5ff597e51057f914b01b0c47a6/jars/classes.jar: D8: Type `org.apache.http.message.BasicHttpResponse` was not found, it is required for default or static interface methods desugaring of `java.util.Map com.sap.mobile.lib.request.ResponseImpl.getHeadersMap()`
+/root/.gradle/caches/transforms-1/files-1.1/Request-3.16.21.aar/e2bd0b5ff597e51057f914b01b0c47a6/jars/classes.jar: D8: Interface `org.apache.http.HttpResponse` not found. It's needed to make sure desugaring of `com.sap.mobile.lib.request.ResponseImpl` is correct. Desugaring will assume that this interface has no default method. This missing interface is declared in the direct hierarchy of `com.sap.mobile.lib.request.IResponse(classpath class)`
+/root/.gradle/caches/transforms-1/files-1.1/CoreServices-3.16.21.aar/1809cbde6aada9191c05fdad62c05497/jars/classes.jar: D8: Type `org.apache.http.util.EntityUtils` was not found, it is required for default or static interface methods desugaring of `void com.sap.smp.rest.AppSettings.onSuccess(com.sap.mobile.lib.sdmconnectivity.ISDMRequest, com.sap.mobile.lib.sdmconnectivity.ISDMResponse)`
+/root/.gradle/caches/transforms-1/files-1.1/Request-3.16.21.aar/e2bd0b5ff597e51057f914b01b0c47a6/jars/classes.jar: D8: Type `org.apache.http.params.HttpProtocolParams` was not found, it is required for default or static interface methods desugaring of `org.apache.http.impl.client.DefaultHttpClient com.sap.mobile.lib.request.ConnectionFactory.getHttpClient(java.lang.String)`
+/root/.gradle/caches/transforms-1/files-1.1/Request-3.16.21.aar/e2bd0b5ff597e51057f914b01b0c47a6/jars/classes.jar: D8: Type `org.apache.http.client.params.HttpClientParams` was not found, it is required for default or static interface methods desugaring of `org.apache.http.impl.client.DefaultHttpClient com.sap.mobile.lib.request.ConnectionFactory.getHttpClient(java.lang.String)`
+/root/.gradle/caches/transforms-1/files-1.1/Request-3.16.21.aar/e2bd0b5ff597e51057f914b01b0c47a6/jars/classes.jar: D8: Interface `org.apache.http.client.CookieStore` not found. It's needed to make sure desugaring of `com.sap.mobile.lib.request.CookieJar` is correct. Desugaring will assume that this interface has no default method.
+/root/.gradle/caches/transforms-1/files-1.1/CoreServices-3.16.21.aar/1809cbde6aada9191c05fdad62c05497/jars/classes.jar: D8: Type `org.apache.http.util.EntityUtils` was not found, it is required for default or static interface methods desugaring of `void com.sap.smp.rest.ClientConnection.onError(com.sap.mobile.lib.sdmconnectivity.ISDMRequest, com.sap.mobile.lib.sdmconnectivity.ISDMResponse, com.sap.mobile.lib.sdmconnectivity.ISDMRequestStateElement)`
+/root/.gradle/caches/transforms-1/files-1.1/CoreServices-3.16.21.aar/1809cbde6aada9191c05fdad62c05497/jars/classes.jar: D8: Type `org.apache.http.util.EntityUtils` was not found, it is required for default or static interface methods desugaring of `void com.sap.smp.rest.UserManager.onError(com.sap.mobile.lib.sdmconnectivity.ISDMRequest, com.sap.mobile.lib.sdmconnectivity.ISDMResponse, com.sap.mobile.lib.sdmconnectivity.ISDMRequestStateElement)`
+/root/.gradle/caches/transforms-1/files-1.1/Request-3.16.21.aar/e2bd0b5ff597e51057f914b01b0c47a6/jars/classes.jar: D8: Interface `org.apache.http.HttpEntity` not found. It's needed to make sure desugaring of `com.sap.mobile.lib.request.SocketConnectionHandler$1` is correct. Desugaring will assume that this interface has no default method.
+/root/.gradle/caches/transforms-1/files-1.1/Request-3.16.21.aar/e2bd0b5ff597e51057f914b01b0c47a6/jars/classes.jar: D8: Interface `org.apache.http.HttpEntity` not found. It's needed to make sure desugaring of `com.sap.mobile.lib.request.SocketConnectionHandler$3` is correct. Desugaring will assume that this interface has no default method.
+/root/.gradle/caches/transforms-1/files-1.1/Request-3.16.21.aar/e2bd0b5ff597e51057f914b01b0c47a6/jars/classes.jar: D8: Type `org.apache.http.util.EntityUtils` was not found, it is required for default or static interface methods desugaring of `com.sap.mobile.lib.request.IRequestStateElement com.sap.mobile.lib.request.SocketConnectionHandler.performRequest(java.lang.String)`
+/root/.gradle/caches/transforms-1/files-1.1/HttpConversation-3.16.21.aar/8626aa0d1194b6027dca295e73fe1f0a/jars/classes.jar: D8: Type `com.sap.smp.client.etm.ElapsedTimeMeter` was not found, it is required for default or static interface methods desugaring of `com.sap.smp.client.httpc.HttpConversationManager$ConversationFlow$PrepareResponseResult com.sap.smp.client.httpc.HttpConversationManager$ConversationFlow.prepareForResponse(java.net.HttpURLConnection, com.sap.smp.client.httpc.HttpConversationManager$ConversationFlow$SendEvent)`
+/root/.gradle/caches/transforms-1/files-1.1/MAFLogonCore-3.16.21.aar/f01dc46cb92f49d1fdf10665991290c0/jars/classes.jar: D8: Interface `com.sap.maf.uicontrols.settingscreen.MAFSecureStore` not found. It's needed to make sure desugaring of `com.sap.maf.tools.logon.core.SecureStoreProxy` is correct. Desugaring will assume that this interface has no default method.
+/root/.gradle/caches/transforms-1/files-1.1/MAFLogonCore-3.16.21.aar/f01dc46cb92f49d1fdf10665991290c0/jars/classes.jar: D8: Type `com.sap.maf.uicontrols.settingscreen.MAFSecureStoreManager` was not found, it is required for default or static interface methods desugaring of `void com.sap.maf.tools.logon.core.LogonCore.persistRegistration()`
+> Task :app:transformClassesWithDexBuilderForDebug
+> Task :app:transformDexArchiveWithExternalLibsDexMergerForDebug
+> Task :app:transformDexArchiveWithDexMergerForDebug
+> Task :app:mergeDebugJniLibFolders
+> Task :app:transformNativeLibsWithMergeJniLibsForDebug
+> Task :app:processDebugJavaRes NO-SOURCE
+> Task :app:transformResourcesWithMergeJavaResForDebug
+> Task :app:packageDebug
+> Task :app:assembleDebug
+> Task :app:cdvBuildDebug
+
+BUILD SUCCESSFUL in 1m 42s
+44 actionable tasks: 44 executed
+Built the following apk(s): 
+	/mnt/workspace/cordova/platforms/android/app/build/outputs/apk/debug/app-debug.apk

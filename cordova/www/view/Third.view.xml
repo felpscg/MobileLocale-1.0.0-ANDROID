@@ -1,0 +1,67 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.coopersap.mobilelocale.controller.Third" xmlns="sap.m"
+	xmlns:layout="sap.ui.commons.layout">
+	<Page showHeader="false" title="Page Title" showFooter="false" showNavButton="false" enableScrolling="false">
+		<content>
+			<layout:AbsoluteLayout horizontalScrolling="Hidden" verticalScrolling="Auto">
+				<layout:positions>
+					<layout:PositionContainer left="0px" top="0px">
+						<layout:control>
+							<OverflowToolbar width="100%" design="Solid" visible="true" enabled="true">
+								<content>
+									<OverflowToolbarButton text="Action" type="Back" iconFirst="false" width="auto" enabled="true" visible="true" iconDensityAware="false"
+										press="_onOverflowToolbarButtonPress"/>
+									<Title text="Relatar Problema (P -122)" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+									<ToolbarSpacer width=""/>
+									<OverflowToolbarButton text="Menu" type="Transparent" icon="sap-icon://menu2" iconFirst="true" width="auto" enabled="true" visible="true"
+										iconDensityAware="false"/>
+								</content>
+							</OverflowToolbar>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="17px" top="517px">
+						<layout:control>
+							<SegmentedButton width="50%" enabled="true" visible="true" class="sapUiLargeMarginBegin">
+								<items>
+									<SegmentedButtonItem icon="sap-icon://feeder-arrow" text="Enviar" width="100%" enabled="true"/>
+								</items>
+							</SegmentedButton>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="39px" top="88px">
+						<layout:control>
+							<Text text="Text" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="87px" top="79px">
+						<layout:control>
+							<TextArea rows="1" cols="20" maxLength="100" wrapping="None" enabled="true" required="false" valueStateText="Invalid entry" visible="true"/>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="88px" top="215px">
+						<layout:control>
+							<TextArea rows="2" cols="20" maxLength="0" wrapping="None" enabled="true" required="false" valueStateText="Invalid entry" visible="true"/>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="87px" top="316px">
+						<layout:control>
+							<CheckBox text="Checkbox Text" selected="true" editable="true" enabled="true" visible="true" width="auto" textDirection="Inherit"
+								wrapping="false" useEntireWidth="true"/>
+						</layout:control>
+					</layout:PositionContainer>
+				</layout:positions>
+			</layout:AbsoluteLayout>
+		</content>
+		<footer>
+			<OverflowToolbar width="100%" height="46px" design="Auto" enabled="false" visible="false">
+				<content>
+					<ToolbarSpacer width=""/>
+					<Button text="Save" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+					<Button text="Cancel" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+				</content>
+			</OverflowToolbar>
+		</footer>
+		<headerContent/>
+		<subHeader/>
+		<customHeader/>
+	</Page>
+</mvc:View>

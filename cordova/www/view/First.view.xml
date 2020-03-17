@@ -1,0 +1,72 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.coopersap.mobilelocale.controller.First" xmlns="sap.m"
+	xmlns:layout="sap.ui.commons.layout">
+	<Page showHeader="false" title="Page Title" showFooter="false" showNavButton="false" enableScrolling="true">
+		<content>
+			<layout:AbsoluteLayout horizontalScrolling="Hidden" verticalScrolling="Auto">
+				<layout:positions>
+					<layout:PositionContainer left="0px" top="0px">
+						<layout:control>
+							<OverflowToolbar width="100%" design="Solid" visible="true" enabled="true">
+								<content>
+									<OverflowToolbarButton text="Action" type="Back" iconFirst="false" width="auto" enabled="true" visible="true" iconDensityAware="false"
+										press="_onOverflowToolbarButtonPress"/>
+									<Title text="Pedido 122" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+									<!--<ToolbarSpacer width=""/>-->
+									<OverflowToolbarButton text="Menu" type="Transparent" icon="sap-icon://menu2" iconFirst="true" width="auto" enabled="true" visible="true"
+										iconDensityAware="false"/>
+								</content>
+							</OverflowToolbar>
+						</layout:control>
+					</layout:PositionContainer>
+					
+					
+					
+					
+				</layout:positions>
+				
+				<layout:positions>
+					<layout:PositionContainer right="70%" top="5em">
+						<layout:control>
+							<VBox>
+								<Text text="Detalhes:" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+								<Text text="Detalhes:" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+							</VBox>
+						</layout:control>
+					</layout:PositionContainer>
+				</layout:positions>
+				<layout:positions>
+					<layout:PositionContainer left="30.2%" top="5em">
+						<layout:control>
+							<VBox>
+								<Text text="Detalhes 222" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+							</VBox>
+						</layout:control>
+					</layout:PositionContainer>
+				</layout:positions>
+				
+				<layout:positions>
+					<layout:PositionContainer left="1%" bottom="0.1em">
+						<layout:control>
+							<SegmentedButton width="98%" enabled="true" visible="true">
+								<items>
+									<SegmentedButtonItem icon="sap-icon://error" text="Prolema" width="43%" enabled="true" press="_onSegmentedButtonItemPress"/>
+									<SegmentedButtonItem icon="sap-icon://car-rental" text="Iniciar Viagem" width="57%" enabled="true" press="_onSegmentedButtonItemPress1"/>
+								</items>
+							</SegmentedButton>
+						</layout:control>
+					</layout:PositionContainer>
+				</layout:positions>
+			</layout:AbsoluteLayout>
+		</content>
+		<footer>
+			<OverflowToolbar width="100%" height="0px" design="Auto" enabled="false" visible="false">
+				<content>
+					<ToolbarSpacer width=""/>
+				</content>
+			</OverflowToolbar>
+		</footer>
+		<headerContent/>
+		<subHeader/>
+		<customHeader/>
+	</Page>
+</mvc:View>

@@ -1,0 +1,76 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.coopersap.mobilelocale.controller.Index" xmlns="sap.m"
+	xmlns:layout="sap.ui.commons.layout">
+	<Page showHeader="false" title="Page Title" showFooter="false" showNavButton="false" enableScrolling="false">
+		<content>
+			<layout:AbsoluteLayout horizontalScrolling="Hidden" verticalScrolling="Auto">
+				<layout:positions>
+					<layout:PositionContainer left="0px" top="0px">
+						<layout:control>
+							<OverflowToolbar width="100%" design="Transparent" visible="true" enabled="true">
+								<content>
+									<Title text="Carregamentos" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" wrapping="false" class="sapUiMediumMarginBegin"/>
+									<ToolbarSpacer width=""/>
+									<OverflowToolbarButton text="sort" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true"
+										iconDensityAware="false"/>
+									<OverflowToolbarButton text="Menu" type="Transparent" icon="sap-icon://menu2" iconFirst="true" width="auto" enabled="true" visible="true"
+										iconDensityAware="false"/>
+								</content>
+							</OverflowToolbar>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="3px" top="50px">
+						<layout:control>
+							<Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
+								class="sapUiResponsiveMargin" items="{path:'/pedidosSet', templateShareable:true}">
+								<infoToolbar>
+									<Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+										<content>
+											<Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</content>
+									</Toolbar>
+								</infoToolbar>
+								<headerToolbar/>
+								<columns>
+									<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+										<header/>
+										<footer/>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem type="Active" press="_onRowPress">
+										<cells>
+											<ObjectIdentifier title="{cliente}"
+												text="{path: 'data_pedido', type: 'sap.ui.model.type.DateTime', formatOptions: { UTC: true, style: 'short' }}" titleActive="false"
+												visible="true"/>
+												<!--titlePress="_onObjectIdentifierTitlePress"-->
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="1%" bottom="0.1em">
+						<layout:control>
+							<SegmentedButton width="98%" enabled="true" visible="true">
+								<items>
+									<SegmentedButtonItem icon="sap-icon://error" text="Prolema" width="50%" enabled="true" press="_onSegmentedButtonItemPress"/>
+									<SegmentedButtonItem icon="sap-icon://list" text="Histórico" width="50%" enabled="true" press="_onSegmentedButtonItemPress1"/>
+								</items>
+							</SegmentedButton>
+						</layout:control>
+					</layout:PositionContainer>
+				</layout:positions>
+			</layout:AbsoluteLayout>
+		</content>
+		<footer>
+			<OverflowToolbar width="100%" height="5em" design="Transparent" enabled="true" visible="false">
+				<content>
+					<ToolbarSpacer width=""/>
+				</content>
+			</OverflowToolbar>
+		</footer>
+		<headerContent/>
+		<subHeader/>
+		<customHeader/>
+	</Page>
+</mvc:View>
