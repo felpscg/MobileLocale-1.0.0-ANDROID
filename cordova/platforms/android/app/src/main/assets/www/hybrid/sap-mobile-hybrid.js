@@ -10,6 +10,39 @@ sap.hybrid = {
 		sap.hybrid.loadCordova = true;
 	},
 
+
+	    openStore: function() {
+            console.log("In openStore");
+            jQuery.sap.require("sap.ui.thirdparty.datajs");  //Required when using SAPUI5 and the Kapsel Offline Store
+            var properties = {
+                "name": "store_mainService",
+                "host": sap.hybrid.kapsel.appContext.registrationContext.serverHost,
+                "port": sap.hybrid.kapsel.appContext.registrationContext.serverPort,
+                "https": sap.hybrid.kapsel.appContext.registrationContext.https,
+                "serviceRoot": fiori_client_appConfig.appID + "_" + mobile_appRoutes[0].destination,
+
+    		"definingRequests": {
+    			"pedidosset": "/pedidos?$expand=ID"
+    		}
+            };
+
+            store = sap.OData.createOfflineStore(properties);
+
+            var openStoreSuccessCallback = function() {
+                console.log("In openStoreSuccessCallback");
+                sap.OData.applyHttpClient();  //Offline OData calls can now be made against datajs.
+                sap.hybrid.startApp();
+            }
+
+            var openStoreErrorCallback = function(error) {
+                console.log("In openStoreErrorCallback");
+                alert("An error occurred" + JSON.stringify(error));
+            }
+
+            store.open(openStoreSuccessCallback, openStoreErrorCallback);
+        },
+
+
 	packUrl: function (url, route) {
 		var result;
 		if (route.manual) { // routes requires a manually created Mobile Destination with Rewrite on Backend and via CP App set
@@ -85,6 +118,9 @@ sap.hybrid = {
 			console.error("cordova is not loaded");
 		}
 	},
+
+
+
 
 	loadComponent: function (componentName) {
 		sap.ui.getCore().attachInit(function () {

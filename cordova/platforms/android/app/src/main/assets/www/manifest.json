@@ -10,7 +10,7 @@
 		},
 		"dataSources": {
 			"local": {
-				"uri": "/localService/metadata.xml",
+				"uri": "/../localService/metadata.xml",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0",

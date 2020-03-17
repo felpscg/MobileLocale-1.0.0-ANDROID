@@ -164,6 +164,28 @@
 
 	sap.hybrid.bootStrap();
 	</script>
+	<script type="text/javascript">
+        		sap.ui.getCore().attachInit(function() {
+        	        //Fake LREP
+        	        jQuery.sap.require("sap.ui.fl.FakeLrepConnector");
+        	        sap.ui.fl.FakeLrepConnector.enableFakeConnector("test/fakeLRep.json");
+
+
+
+        				sap.ui.require([
+        					"com/coopersap/mobilelocale/localService/mockserver"
+        				], function (server) {
+
+        					server.init();
+
+        						// initialize the ushell sandbox component
+        						// sap.ushell.Container.createRenderer().placeAt("app");
+        						new sap.ui.core.ComponentContainer({ name : "com.coopersap.mobilelocale"}).placeAt("app");
+
+                        });
+
+                });
+        	</script>
 
 </head>
 
