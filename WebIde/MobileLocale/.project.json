@@ -1,0 +1,19 @@
+{
+	"dataBinding": {
+		"/webapp/view/Index.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/First.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/Second.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/Third.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/Fourth.view.xml": {
+			"entitySet": ""
+		}
+	}
+}

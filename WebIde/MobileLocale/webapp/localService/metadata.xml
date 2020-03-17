@@ -1,0 +1,160 @@
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema Namespace="06ab75c7c014ae681328dc63" xml:lang="en" sap:schema-version="0000" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityContainer Name="06ab75c7c014ae681328dc63_Entities" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="pedidosSet" EntityType="06ab75c7c014ae681328dc63.pedidos" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+				<AssociationSet Name="pedidoslocalizacaolocalizacoes" Association="06ab75c7c014ae681328dc63.pedidoslocalizacaolocalizacoes"
+					sap:creatable="true" sap:updatable="true" sap:deletable="true">
+					<End EntitySet="pedidosSet" Role="FromRole_pedidoslocalizacaolocalizacoes"/>
+					<End EntitySet="localizacoesSet" Role="ToRole_pedidoslocalizacaolocalizacoes"/>
+				</AssociationSet>
+				<AssociationSet Name="pedidoserroserros" Association="06ab75c7c014ae681328dc63.pedidoserroserros" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true">
+					<End EntitySet="pedidosSet" Role="FromRole_pedidoserroserros"/>
+					<End EntitySet="errosSet" Role="ToRole_pedidoserroserros"/>
+				</AssociationSet>
+				<AssociationSet Name="pedidosenderecoenderecos" Association="06ab75c7c014ae681328dc63.pedidosenderecoenderecos" sap:creatable="true"
+					sap:updatable="true" sap:deletable="true">
+					<End EntitySet="pedidosSet" Role="FromRole_pedidosenderecoenderecos"/>
+					<End EntitySet="enderecosSet" Role="ToRole_pedidosenderecoenderecos"/>
+				</AssociationSet>
+				<AssociationSet Name="pedidosmotoristamotoristas" Association="06ab75c7c014ae681328dc63.pedidosmotoristamotoristas" sap:creatable="true"
+					sap:updatable="true" sap:deletable="true">
+					<End EntitySet="pedidosSet" Role="FromRole_pedidosmotoristamotoristas"/>
+					<End EntitySet="motoristasSet" Role="ToRole_pedidosmotoristamotoristas"/>
+				</AssociationSet>
+				<EntitySet Name="localizacoesSet" EntityType="06ab75c7c014ae681328dc63.localizacoes" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true"/>
+				<EntitySet Name="errosSet" EntityType="06ab75c7c014ae681328dc63.erros" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+				<EntitySet Name="motoristasSet" EntityType="06ab75c7c014ae681328dc63.motoristas" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true"/>
+				<EntitySet Name="enderecosSet" EntityType="06ab75c7c014ae681328dc63.enderecos" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true"/>
+			</EntityContainer>
+			<EntityType Name="pedidos">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="cliente" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DefaultName"/>
+				<Property Name="data_carregamento" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:display-format="Date" sap:label="data_carregamento"/>
+				<Property Name="data_pedido" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:display-format="Date"
+					sap:label="data_pedido"/>
+				<Property Name="qr_code" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="qr_code"/>
+				<Property Name="status" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="status"/>
+				<Property Name="agrupador_carga" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="agrupador_carga"/>
+				<Property Name="___FK_f3344726714e0b1e1328dd72_00028" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="___FK_f3344726714e0b1e1328dd72_00028"/>
+				<Property Name="___FK_f3344726714e0b1e1328dd72_00051" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="___FK_f3344726714e0b1e1328dd72_00051"/>
+				<Property Name="___FK_f3344726714e0b1e1328dd72_00053" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="___FK_f3344726714e0b1e1328dd72_00053"/>
+				<NavigationProperty Name="localizacao" Relationship="06ab75c7c014ae681328dc63.pedidoslocalizacaolocalizacoes"
+					FromRole="FromRole_pedidoslocalizacaolocalizacoes" ToRole="ToRole_pedidoslocalizacaolocalizacoes"/>
+				<NavigationProperty Name="erros" Relationship="06ab75c7c014ae681328dc63.pedidoserroserros" FromRole="FromRole_pedidoserroserros"
+					ToRole="ToRole_pedidoserroserros"/>
+				<NavigationProperty Name="endereco" Relationship="06ab75c7c014ae681328dc63.pedidosenderecoenderecos"
+					FromRole="FromRole_pedidosenderecoenderecos" ToRole="ToRole_pedidosenderecoenderecos"/>
+				<NavigationProperty Name="motorista" Relationship="06ab75c7c014ae681328dc63.pedidosmotoristamotoristas"
+					FromRole="FromRole_pedidosmotoristamotoristas" ToRole="ToRole_pedidosmotoristamotoristas"/>
+			</EntityType>
+			<Association Name="pedidoslocalizacaolocalizacoes">
+				<End Type="06ab75c7c014ae681328dc63.pedidos" Multiplicity="1" Role="FromRole_pedidoslocalizacaolocalizacoes"/>
+				<End Type="06ab75c7c014ae681328dc63.localizacoes" Multiplicity="1" Role="ToRole_pedidoslocalizacaolocalizacoes"/>
+				<ReferentialConstraint>
+					<Principal Role="ToRole_pedidoslocalizacaolocalizacoes">
+						<PropertyRef Name="ID"/>
+					</Principal>
+					<Dependent Role="FromRole_pedidoslocalizacaolocalizacoes">
+						<PropertyRef Name="___FK_f3344726714e0b1e1328dd72_00028"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="pedidoserroserros">
+				<End Type="06ab75c7c014ae681328dc63.pedidos" Multiplicity="1" Role="FromRole_pedidoserroserros"/>
+				<End Type="06ab75c7c014ae681328dc63.erros" Multiplicity="*" Role="ToRole_pedidoserroserros"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_pedidoserroserros">
+						<PropertyRef Name="ID"/>
+					</Principal>
+					<Dependent Role="ToRole_pedidoserroserros">
+						<PropertyRef Name="___FK_f3344726714e0b1e1328dd72_00030"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="pedidosenderecoenderecos">
+				<End Type="06ab75c7c014ae681328dc63.pedidos" Multiplicity="1" Role="FromRole_pedidosenderecoenderecos"/>
+				<End Type="06ab75c7c014ae681328dc63.enderecos" Multiplicity="1" Role="ToRole_pedidosenderecoenderecos"/>
+				<ReferentialConstraint>
+					<Principal Role="ToRole_pedidosenderecoenderecos">
+						<PropertyRef Name="ID"/>
+					</Principal>
+					<Dependent Role="FromRole_pedidosenderecoenderecos">
+						<PropertyRef Name="___FK_f3344726714e0b1e1328dd72_00051"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="pedidosmotoristamotoristas">
+				<End Type="06ab75c7c014ae681328dc63.pedidos" Multiplicity="1" Role="FromRole_pedidosmotoristamotoristas"/>
+				<End Type="06ab75c7c014ae681328dc63.motoristas" Multiplicity="1" Role="ToRole_pedidosmotoristamotoristas"/>
+				<ReferentialConstraint>
+					<Principal Role="ToRole_pedidosmotoristamotoristas">
+						<PropertyRef Name="ID"/>
+					</Principal>
+					<Dependent Role="FromRole_pedidosmotoristamotoristas">
+						<PropertyRef Name="___FK_f3344726714e0b1e1328dd72_00053"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<EntityType Name="localizacoes">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="latitude" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="latitude"/>
+				<Property Name="longitude" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="longitude"/>
+				<Property Name="Altitude" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Altitude"/>
+				<Property Name="precisao" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DefaultName"/>
+				<Property Name="precisao_altitude" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="precisao_altitude"/>
+				<Property Name="posicao" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DefaultName"/>
+				<Property Name="velocidade" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="speed"/>
+				<Property Name="timestamp" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="times"/>
+			</EntityType>
+			<EntityType Name="erros">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="assunto" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="assunto"/>
+				<Property Name="descricao" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="descricao"/>
+				<Property Name="___FK_f3344726714e0b1e1328dd72_00030" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="___FK_f3344726714e0b1e1328dd72_00030"/>
+			</EntityType>
+			<EntityType Name="motoristas">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="nome" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DefaultName"/>
+				<Property Name="placa" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="placa"/>
+			</EntityType>
+			<EntityType Name="enderecos">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="cep" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="cep"/>
+				<Property Name="endereco" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="endereco"/>
+				<Property Name="numero" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="numero"/>
+				<Property Name="bairro" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="bairro"/>
+				<Property Name="cidade" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="cidade"/>
+				<Property Name="uf" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="uf"/>
+				<Property Name="complemento" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="complemento"/>
+			</EntityType>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

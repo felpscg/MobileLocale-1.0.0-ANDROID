@@ -1,0 +1,12 @@
+[{
+	"ID": "0",
+	"cliente": "Cliente 1",
+	"data_carregamento": "/Date(1583790071000)/",
+	"data_pedido": "/Date(1583961011000)/",
+	"qr_code": "1231231",
+	"status": "agendado",
+	"agrupador_carga": "1133313323",
+	"___FK_f3344726714e0b1e1328dd72_00028": "0",
+	"___FK_f3344726714e0b1e1328dd72_00051": "0",
+	"___FK_f3344726714e0b1e1328dd72_00053": "0"
+}]

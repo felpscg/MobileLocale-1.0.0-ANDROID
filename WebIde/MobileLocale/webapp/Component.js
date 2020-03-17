@@ -7,6 +7,7 @@ sap.ui.define([
 	"use strict";
 
 	var navigationWithContext = {
+
 	};
 
 	return UIComponent.extend("com.coopersap.mobilelocale.Component", {
